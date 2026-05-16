@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactieve plattegrond — Beplantingsgids</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="plattegrond.css">
+</head>
+<body class="plattegrond-page">
+
+<header class="site-header">
+  <h1>Interactieve plattegrond</h1>
+  <p class="subtitle">Hover over een bolletje voor de plant. Identieke planten worden in alle vakken gehighlight.</p>
+  <nav class="group-nav" aria-label="Navigatie">
+    <a href="index.html">← Terug naar checklist</a>
+    <a href="#" id="filter-all" class="active">Toon alles</a>
+    <a href="#" data-group="ronde_bak_a">Ronde bak A</a>
+    <a href="#" data-group="ronde_bak_b">Ronde bak B</a>
+    <a href="#" data-group="ronde_bak_c">Ronde bak C</a>
+    <a href="#" data-group="border">Border</a>
+  </nav>
+</header>
+
+<main class="layout">
+  <section class="map-pane">
+    <div class="map-wrap" id="map">
+      <img id="map-img" src="assets/plattegrond.jpg" alt="Plattegrond beplantingsplan">
+      <div id="dots" class="dots"></div>
+    </div>
+    <p class="hint" id="hint">Tip: tik op een bolletje op mobiel om vast te zetten. Tik nogmaals om los te laten.</p>
+  </section>
+
+  <aside class="inspector" id="inspector">
+    <div class="inspector-empty">
+      <h2>Selecteer een plant</h2>
+      <p>Ga met de muis over een bolletje op de plattegrond, of tik erop. Je ziet hier de plant en alle plekken waar hij voorkomt.</p>
+    </div>
+  </aside>
+</main>
+
+<script src="plattegrond.js"></script>
+</body>
+</html>

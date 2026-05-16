@@ -1,0 +1,137 @@
+/* Interactieve plattegrond styling */
+.plattegrond-page{background:var(--bg)}
+.plattegrond-page .site-header{padding-bottom:.75rem}
+
+.layout{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:1rem;
+  padding:1rem;
+  max-width:1600px;
+  margin:0 auto;
+}
+@media (min-width: 980px){
+  .layout{grid-template-columns: 1fr 380px;}
+}
+
+.map-pane{min-width:0}
+.map-wrap{
+  position:relative;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.map-wrap img{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+.dots{position:absolute;inset:0;pointer-events:none}
+
+.dot{
+  position:absolute;
+  /* size & translate set inline via JS for responsive scaling */
+  width:1.6%;            /* default; scaled in JS too */
+  aspect-ratio:1/1;
+  transform:translate(-50%, -50%);
+  border-radius:50%;
+  border:2px solid transparent;
+  cursor:pointer;
+  pointer-events:auto;
+  transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+  background:transparent;
+}
+.dot:hover, .dot.is-active{
+  border-color:#111;
+  box-shadow:0 0 0 2px rgba(255,255,255,.85), 0 0 0 4px rgba(46,125,79,.6);
+  transform:translate(-50%, -50%) scale(1.35);
+  z-index:3;
+}
+.dot.is-related{
+  border-color:var(--accent);
+  box-shadow:0 0 0 2px rgba(255,255,255,.9), 0 0 0 4px var(--accent);
+  background: rgba(46,125,79,.25);
+  z-index:2;
+}
+.dot.is-dim{ opacity:.25 }
+
+/* Per-group colors (subtle tint at rest, only visible on hover/highlight) */
+.dot[data-group="ronde_bak_a"]{}
+.dot[data-group="ronde_bak_b"]{}
+.dot[data-group="ronde_bak_c"]{}
+.dot[data-group="border"]{}
+.dot.tree{
+  width:2.4%;
+  border:2px dashed rgba(46,125,79,.5);
+  background:rgba(46,125,79,.10);
+}
+.dot.tree:hover,.dot.tree.is-active{
+  background:rgba(46,125,79,.25);
+}
+.dot.tree.is-related{
+  background:rgba(46,125,79,.35);
+  border-style:solid;
+}
+
+/* Inspector — sticks below the sticky header while user scrolls the map */
+.inspector{
+  position:sticky;
+  top:calc(var(--header-h, 4rem) + .75rem);
+  align-self:start;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:1rem;
+  min-height:200px;
+  max-height:calc(100vh - var(--header-h, 4rem) - 2rem);
+  overflow:auto;
+}
+.inspector-empty h2{margin:0 0 .5rem;font-size:1.1rem}
+.inspector-empty p{color:var(--muted);font-size:.9rem;margin:0}
+
+.insp-card{display:flex;flex-direction:column;gap:.6rem}
+.insp-img{
+  position:relative;width:100%;aspect-ratio:4/3;border-radius:10px;
+  overflow:hidden;background:#eee;
+}
+.insp-img img{width:100%;height:100%;object-fit:cover;display:block}
+.insp-num{
+  position:absolute;top:.5rem;left:.5rem;background:var(--surface);
+  border:2px solid var(--accent);color:var(--accent);
+  font-weight:700;font-size:1rem;width:2.2rem;height:2.2rem;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow);
+}
+.insp-similar{
+  position:absolute;bottom:.4rem;left:.4rem;background:rgba(0,0,0,.55);
+  color:#fff;font-size:.7rem;padding:.1rem .45rem;border-radius:4px;
+}
+.insp-name{font-weight:600;font-size:1.1rem;line-height:1.3}
+.insp-sci{color:var(--muted);font-size:.85rem;font-style:italic}
+.insp-meta{display:flex;flex-wrap:wrap;gap:.5rem;font-size:.85rem;color:var(--muted)}
+.insp-meta b{color:var(--text);font-weight:600}
+.insp-locations{font-size:.9rem}
+.insp-locations h3{margin:.5rem 0 .25rem;font-size:.95rem}
+.insp-locations ul{margin:.25rem 0 0;padding-left:1.1rem}
+.insp-locations li{margin:.15rem 0;color:var(--muted)}
+.insp-locations li b{color:var(--text)}
+.insp-locations li.current{color:var(--accent)}
+.insp-credit{font-size:.7rem;color:var(--muted)}
+.insp-credit a{color:var(--muted)}
+
+.hint{
+  font-size:.78rem;color:var(--muted);margin:.5rem .25rem 0;text-align:center;
+}
+
+/* Group filter active state */
+.group-nav a.active{background:var(--accent);color:#fff}
+.group-nav a[data-group]{cursor:pointer}
+
+/* When a group filter is active, dim other groups */
+body.filter-active .dot:not(.in-filter){opacity:.18}
+
+@media print{
+  .group-nav,.hint,.inspector{display:none}
+  .layout{grid-template-columns:1fr;padding:0}
+  .dot{display:none}
+  .map-wrap{border:none;box-shadow:none}
+}

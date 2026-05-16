@@ -29,6 +29,8 @@ body{padding-bottom:3rem}
   border:1px solid transparent;
 }
 .group-nav a:hover{border-color:var(--accent)}
+.group-nav a.primary{background:var(--accent);color:#fff}
+.group-nav a.primary:hover{background:#246b3f}
 .header-actions{display:flex;gap:.5rem;flex-wrap:wrap}
 .header-actions button{
   padding:.4rem .8rem;font-size:.85rem;border-radius:8px;border:1px solid var(--border);
