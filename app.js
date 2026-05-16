@@ -119,10 +119,6 @@ async function init(){
     trees.appendChild(li);
   });
 
-  // Assumptions
-  const ass = document.getElementById('assumptions');
-  (data.assumptions || []).forEach(a => ass.appendChild(el('li', {}, [a])));
-
   // Reset
   document.getElementById('reset-checks').addEventListener('click', () => {
     if (!confirm('Alle vinkjes wissen?')) return;
