@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beplantingsgids — Tuin</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Beplantingsgids</h1>
+  <p class="subtitle">Praktische tuinchecklist per plantvak — gemaakt op basis van het beplantingsplan.</p>
+  <nav class="group-nav" aria-label="Plantvakken">
+    <a href="#ronde_bak_a">Ronde bak A</a>
+    <a href="#ronde_bak_b">Ronde bak B</a>
+    <a href="#ronde_bak_c">Ronde bak C</a>
+    <a href="#border">Border / plantenstrook</a>
+    <a href="#bomen">Bomen</a>
+    <a href="#aannames">Aannames</a>
+  </nav>
+  <div class="header-actions">
+    <button id="reset-checks" type="button">Vinkjes wissen</button>
+    <button id="check-all" type="button">Alles aanvinken</button>
+    <button onclick="window.print()" type="button">Printen / PDF</button>
+  </div>
+</header>
+
+<main id="app">
+  <p class="loading">Gegevens laden…</p>
+</main>
+
+<section id="bomen" class="trees-section">
+  <h2>Bomen — Legenda</h2>
+  <p>De letters A / B / C in het beplantingsplan markeren de bomen, niet de plantvakken.</p>
+  <ul id="trees-list"></ul>
+</section>
+
+<section id="aannames">
+  <h2>Aannames &amp; opmerkingen</h2>
+  <ul id="assumptions"></ul>
+</section>
+
+<section id="credits">
+  <h2>Beeldcredits</h2>
+  <p>Plantenfoto's zijn afkomstig van Wikimedia Commons / Wikipedia. Per plant staat de bronlink op de plantkaart.</p>
+</section>
+
+<footer class="site-footer">
+  <p>Beplantingsgids · gegenereerd uit "Beplantingsplan versie 1.pdf".</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

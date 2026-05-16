@@ -1,0 +1,119 @@
+{
+  "groups": [
+    {
+      "id": "ronde_bak_a",
+      "name": "Ronde bak A",
+      "crop": "assets/crops/ronde_bak_a.jpg",
+      "description": "Linker ronde bak met Amelanchier lamarckii (meerstammig).",
+      "tree": {"label": "A", "name": "Amelanchier lamarckii meerstammig", "qty": "1 st (deel van 2 totaal)"},
+      "plants": [
+        {"nr": 1, "name": "Nepeta faassenii 'Grol'", "bloei": "6-10", "hoogte": "50 cm", "qty": "3 st", "slug": "nepeta-faassenii-grol"},
+        {"nr": 2, "name": "Sesleria autumnalis", "bloei": "", "hoogte": "40 cm", "qty": "3 st", "slug": "sesleria-autumnalis"},
+        {"nr": 3, "name": "Salvia nem. 'Caradonna'", "bloei": "6-8", "hoogte": "60 cm", "qty": "2 st", "slug": "salvia-nemorosa-caradonna"},
+        {"nr": 4, "name": "Monarda 'Grape Gumball'", "bloei": "7-9", "hoogte": "50 cm", "qty": "2 st", "slug": "monarda-grape-gumball"},
+        {"nr": 5, "name": "Coreopsis verticillata 'Moonbeam'", "bloei": "6-10", "hoogte": "50 cm", "qty": "1 st", "slug": "coreopsis-verticillata-moonbeam"},
+        {"nr": 6, "name": "Gypsophila 'Rosenschleier'", "bloei": "7-8", "hoogte": "40 cm", "qty": "2 st", "slug": "gypsophila-rosenschleier"},
+        {"nr": 7, "name": "Pennisetum alopecuroides 'Hameln'", "bloei": "", "hoogte": "60 cm", "qty": "1 st", "slug": "pennisetum-alopecuroides-hameln"},
+        {"nr": 8, "name": "Helenium 'Moerheim Beauty'", "bloei": "7-9", "hoogte": "90 cm", "qty": "2 st", "slug": "helenium-moerheim-beauty"}
+      ]
+    },
+    {
+      "id": "ronde_bak_b",
+      "name": "Ronde bak B",
+      "crop": "assets/crops/ronde_bak_b.jpg",
+      "description": "Middelste ronde bak met Albizia julibrissin 'Boubri' (Ombrella).",
+      "tree": {"label": "B", "name": "Albizia julibrissin 'Boubri' (Ombrella)", "qty": "1 st"},
+      "plants": [
+        {"nr": 44, "name": "Primula vialii", "bloei": "6-7", "hoogte": "40 cm", "qty": "2 st", "slug": "primula-vialii"},
+        {"nr": 45, "name": "Nepeta faassenii 'Grol'", "bloei": "6-10", "hoogte": "50 cm", "qty": "3 st", "slug": "nepeta-faassenii-grol"},
+        {"nr": 46, "name": "Coreopsis verticillata 'Moonbeam'", "bloei": "6-10", "hoogte": "50 cm", "qty": "2 st", "slug": "coreopsis-verticillata-moonbeam"},
+        {"nr": 47, "name": "Salvia nem. 'Caradonna'", "bloei": "6-8", "hoogte": "60 cm", "qty": "2 st", "slug": "salvia-nemorosa-caradonna"},
+        {"nr": 48, "name": "Erysimum 'Bowles Mauve'", "bloei": "3-10", "hoogte": "75 cm", "qty": "2 st", "slug": "erysimum-bowles-mauve"},
+        {"nr": 49, "name": "Alchemilla mollis", "bloei": "5-9", "hoogte": "40 cm", "qty": "2 st", "slug": "alchemilla-mollis"},
+        {"nr": 50, "name": "Sesleria autumnalis", "bloei": "", "hoogte": "40 cm", "qty": "6 st", "slug": "sesleria-autumnalis"},
+        {"nr": 51, "name": "Allium sphaerocephalon", "bloei": "6-8", "hoogte": "70 cm", "qty": "3 st", "slug": "allium-sphaerocephalon"},
+        {"nr": 52, "name": "Agastache 'Linda'", "bloei": "7-10", "hoogte": "80 cm", "qty": "1 st", "slug": "agastache-linda"},
+        {"nr": 53, "name": "Scabiosa col.a 'Butterfly Blue'", "bloei": "5-9", "hoogte": "40 cm", "qty": "2 st", "slug": "scabiosa-butterfly-blue"},
+        {"nr": 54, "name": "Gypsophila 'Rosenschleier'", "bloei": "7-8", "hoogte": "40 cm", "qty": "1 st", "slug": "gypsophila-rosenschleier"},
+        {"nr": 55, "name": "Aster cordifolius 'Little Carlow'", "bloei": "8-10", "hoogte": "80 cm", "qty": "1 st", "slug": "aster-cordifolius-little-carlow"},
+        {"nr": 56, "name": "Geranium 'Rozanne'", "bloei": "6-10", "hoogte": "40 cm", "qty": "2 st", "slug": "geranium-rozanne"}
+      ]
+    },
+    {
+      "id": "ronde_bak_c",
+      "name": "Ronde bak C",
+      "crop": "assets/crops/ronde_bak_c.jpg",
+      "description": "Onderste ronde bak met Amelanchier lamarckii (meerstammig).",
+      "tree": {"label": "A", "name": "Amelanchier lamarckii meerstammig", "qty": "1 st (deel van 2 totaal)"},
+      "plants": [
+        {"nr": 57, "name": "Phlox (D) 'Daniel Cushion'", "bloei": "4-6", "hoogte": "15 cm", "qty": "2 st", "slug": "phlox-daniel-cushion"},
+        {"nr": 58, "name": "Nepeta faassenii 'Grol'", "bloei": "6-10", "hoogte": "50 cm", "qty": "2 st", "slug": "nepeta-faassenii-grol"},
+        {"nr": 59, "name": "Liatris spicata 'Kobold'", "bloei": "6-9", "hoogte": "50 cm", "qty": "1 st", "slug": "liatris-spicata-kobold"},
+        {"nr": 60, "name": "Alchemilla mollis", "bloei": "5-9", "hoogte": "40 cm", "qty": "2 st", "slug": "alchemilla-mollis"},
+        {"nr": 61, "name": "Echinacea purpurea", "bloei": "7-9", "hoogte": "80 cm", "qty": "3 st", "slug": "echinacea-purpurea"},
+        {"nr": 62, "name": "Gaura lind. 'Whirling Butterflies'", "bloei": "6-9", "hoogte": "80 cm", "qty": "1 st", "slug": "gaura-whirling-butterflies"},
+        {"nr": 63, "name": "Sesleria autumnalis", "bloei": "", "hoogte": "40 cm", "qty": "3 st", "slug": "sesleria-autumnalis"},
+        {"nr": 64, "name": "Allium sphaerocephalon", "bloei": "6-8", "hoogte": "70 cm", "qty": "1 st", "slug": "allium-sphaerocephalon"},
+        {"nr": 65, "name": "Amsonia 'Blue Ice'", "bloei": "5-7", "hoogte": "40 cm", "qty": "2 st", "slug": "amsonia-blue-ice"},
+        {"nr": 66, "name": "Sedum spectabile 'Brillant'", "bloei": "8-9", "hoogte": "40 cm", "qty": "1 st", "slug": "sedum-spectabile-brillant"}
+      ]
+    },
+    {
+      "id": "border",
+      "name": "Border / plantenstrook",
+      "crop": "assets/crops/border.jpg",
+      "description": "L-vormige border langs de patio met Quercus ilex leivormen (3 st).",
+      "tree": {"label": "C", "name": "Quercus ilex leivorm", "qty": "3 st"},
+      "plants": [
+        {"nr": 9, "name": "Choisya ternata", "bloei": "5-6", "hoogte": "150 cm", "qty": "1 st", "slug": "choisya-ternata"},
+        {"nr": 10, "name": "Lavandula angustifolia 'Hidcote'", "bloei": "6-8", "hoogte": "50 cm", "qty": "1 st", "slug": "lavandula-angustifolia-hidcote"},
+        {"nr": 11, "name": "Origanum 'Rosenkuppel'", "bloei": "7-9", "hoogte": "50 cm", "qty": "2 st", "slug": "origanum-rosenkuppel"},
+        {"nr": 12, "name": "Agastache 'Blue Fortune'", "bloei": "7-9", "hoogte": "90 cm", "qty": "1 st", "slug": "agastache-blue-fortune"},
+        {"nr": 13, "name": "Anemone hybride 'Honorine Jobert'", "bloei": "9-10", "hoogte": "80 cm", "qty": "1 st", "slug": "anemone-honorine-jobert"},
+        {"nr": 14, "name": "Verbena bonariensis", "bloei": "7-9", "hoogte": "150 cm", "qty": "3 st", "slug": "verbena-bonariensis"},
+        {"nr": 15, "name": "Miscanthus sin. 'Yakushima Dwarf'", "bloei": "", "hoogte": "90 cm", "qty": "1 st", "slug": "miscanthus-yakushima-dwarf"},
+        {"nr": 16, "name": "Liatris spicata 'Kobold'", "bloei": "6-9", "hoogte": "50 cm", "qty": "1 st", "slug": "liatris-spicata-kobold"},
+        {"nr": 17, "name": "Geranium 'Rozanne'", "bloei": "6-10", "hoogte": "40 cm", "qty": "1 st", "slug": "geranium-rozanne"},
+        {"nr": 18, "name": "Gaura lind. 'Whirling Butterflies'", "bloei": "6-9", "hoogte": "80 cm", "qty": "1 st", "slug": "gaura-whirling-butterflies"},
+        {"nr": 19, "name": "Exochorda 'The Bride'", "bloei": "5-6", "hoogte": "300 cm", "qty": "1 st", "slug": "exochorda-the-bride"},
+        {"nr": 20, "name": "Phlox (S) 'Emerald Cushion Blue'", "bloei": "5-6", "hoogte": "15 cm", "qty": "1 st", "slug": "phlox-emerald-cushion-blue"},
+        {"nr": 21, "name": "Hydrangea pan. 'Little Lime'", "bloei": "7-9", "hoogte": "100 cm", "qty": "1 st", "slug": "hydrangea-paniculata-little-lime"},
+        {"nr": 22, "name": "Sesleria autumnalis", "bloei": "", "hoogte": "40 cm", "qty": "3 st", "slug": "sesleria-autumnalis"},
+        {"nr": 23, "name": "Allium sphaerocephalon", "bloei": "6-8", "hoogte": "70 cm", "qty": "4 st", "slug": "allium-sphaerocephalon"},
+        {"nr": 24, "name": "Echinacea purpurea", "bloei": "7-9", "hoogte": "80 cm", "qty": "3 st", "slug": "echinacea-purpurea"},
+        {"nr": 25, "name": "Phlox (D) 'Daniel Cushion'", "bloei": "4-6", "hoogte": "15 cm", "qty": "1 st", "slug": "phlox-daniel-cushion"},
+        {"nr": 26, "name": "Geranium 'Rozanne'", "bloei": "6-10", "hoogte": "40 cm", "qty": "1 st", "slug": "geranium-rozanne"},
+        {"nr": 27, "name": "Aster cordifolius 'Little Carlow'", "bloei": "8-10", "hoogte": "80 cm", "qty": "1 st", "slug": "aster-cordifolius-little-carlow"},
+        {"nr": 28, "name": "Miscanthus sinensis 'Morning Light'", "bloei": "", "hoogte": "150 cm", "qty": "3 st", "slug": "miscanthus-morning-light"},
+        {"nr": 29, "name": "Verbena bonariensis", "bloei": "7-9", "hoogte": "150 cm", "qty": "3 st", "slug": "verbena-bonariensis"},
+        {"nr": 30, "name": "Gypsophila paniculata 'Fairy Perfect'", "bloei": "7-9", "hoogte": "100 cm", "qty": "1 st", "slug": "gypsophila-paniculata-fairy-perfect"},
+        {"nr": 31, "name": "Phlox (P) 'Blue Paradise'", "bloei": "7-9", "hoogte": "90 cm", "qty": "1 st", "slug": "phlox-paniculata-blue-paradise"},
+        {"nr": 32, "name": "Sedum spectabile 'Brillant'", "bloei": "8-9", "hoogte": "40 cm", "qty": "1 st", "slug": "sedum-spectabile-brillant"},
+        {"nr": 33, "name": "Gaura lind. 'Whirling Butterflies'", "bloei": "6-9", "hoogte": "80 cm", "qty": "1 st", "slug": "gaura-whirling-butterflies"},
+        {"nr": 34, "name": "Ceanothus thyrsiflorus repens", "bloei": "4-5", "hoogte": "50 cm", "qty": "1 st", "slug": "ceanothus-thyrsiflorus-repens"},
+        {"nr": 35, "name": "Perovskia atriplicifolia 'Little Spire'", "bloei": "7-9", "hoogte": "80 cm", "qty": "1 st", "slug": "perovskia-little-spire"},
+        {"nr": 36, "name": "Aster divaricatus", "bloei": "6-8", "hoogte": "60 cm", "qty": "1 st", "slug": "aster-divaricatus"},
+        {"nr": 37, "name": "Wisteria sinensis 'Prolific'", "bloei": "4-5", "hoogte": "300 cm", "qty": "1 st", "slug": "wisteria-sinensis-prolific"},
+        {"nr": 38, "name": "Miscanthus sinensis 'Morning Light'", "bloei": "", "hoogte": "150 cm", "qty": "1 st", "slug": "miscanthus-morning-light"},
+        {"nr": 39, "name": "Monarda 'Croftway Pink'", "bloei": "7-8", "hoogte": "100 cm", "qty": "2 st", "slug": "monarda-croftway-pink"},
+        {"nr": 40, "name": "Brunnera macrophylla", "bloei": "4-5", "hoogte": "40 cm", "qty": "1 st", "slug": "brunnera-macrophylla"},
+        {"nr": 41, "name": "Lythrum salicaria 'Robert'", "bloei": "6-8", "hoogte": "70 cm", "qty": "1 st", "slug": "lythrum-salicaria-robert"},
+        {"nr": 42, "name": "Liriope muscari", "bloei": "8-10", "hoogte": "25 cm", "qty": "1 st", "slug": "liriope-muscari"},
+        {"nr": 43, "name": "Hydrangea 'Annabelle'", "bloei": "7-9", "hoogte": "125 cm", "qty": "1 st", "slug": "hydrangea-annabelle"}
+      ]
+    }
+  ],
+  "assumptions": [
+    "De ronde bakken zijn niet expliciet als A/B/C gelabeld in het plan; de letters A/B/C in het plan markeren bomen (A = Amelanchier, B = Albizia, C = Quercus). De ronde bakken zijn hier benoemd op basis van positie: A = linker ronde bak, B = middelste ronde bak, C = onderste ronde bak.",
+    "Planten 1-8 zijn toegekend aan Ronde bak A; 44-56 aan Ronde bak B; 57-66 aan Ronde bak C; 9-43 aan de Border / plantenstrook. Toekenning is bepaald op basis van de plaatsing van de genummerde stippen op de plattegrond.",
+    "Plant 13 (Anemone 'Honorine Jobert') geeft '80' aan in het plan; aangenomen is 80 cm.",
+    "Plant 38 ('Miscanthus sinensis Morning Light') geeft alleen '150' aan; aangenomen is 150 cm.",
+    "Plant 62 vermeld als 'Gaura lind. Whirling butterflies 6-9 80 cm'; afgeronde versie als 80 cm.",
+    "Foto's komen uit Wikimedia Commons en zijn meestal soort- of cultivarfoto. Bij ontbreken van cultivar-specifieke foto is een soortfoto gebruikt en gemarkeerd als 'vergelijkbare foto'."
+  ],
+  "trees_legend": [
+    {"label": "A", "name": "Amelanchier lamarckii meerstammig", "qty": "2 st"},
+    {"label": "B", "name": "Albizia julibrissin 'Boubri' (Ombrella)", "qty": "1 st"},
+    {"label": "C", "name": "Quercus ilex leivorm", "qty": "3 st"}
+  ]
+}
