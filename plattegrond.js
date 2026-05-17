@@ -93,6 +93,7 @@ function renderDots(){
     el.type = 'button';
     el.className = 'dot tree';
     el.dataset.tree = id;
+    el.dataset.treeLabel = t.label;
     el.dataset.slug = t.slug;
     el.style.left = xp + '%';
     el.style.top = yp + '%';
@@ -110,16 +111,17 @@ function layoutDots(){
   const img = $('#map-img');
   if (!img.naturalWidth) return;
   const w = img.clientWidth;
-  // dot is 1.6% of img width by default; convert to fixed px on huge screens so they don't get massive
-  // and to a sensible minimum on small screens.
-  const px = Math.max(14, Math.min(28, w * 0.018));
+  // Keep buttons just big enough to match the underlying coloured dots (about 5pt
+  // wide in PDF coords). With ~560pt visible in img width, that's roughly w/110 px.
+  // We don't want neighbours to overlap in dense areas like the right border segment.
+  const px = Math.max(11, Math.min(18, w / 110));
   document.querySelectorAll('.dot').forEach(d => {
     d.style.width = px + 'px';
     d.style.height = px + 'px';
   });
   document.querySelectorAll('.dot.tree').forEach(d => {
-    d.style.width = (px*1.5) + 'px';
-    d.style.height = (px*1.5) + 'px';
+    d.style.width = (px*1.7) + 'px';
+    d.style.height = (px*1.7) + 'px';
   });
 }
 
