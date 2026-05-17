@@ -57,28 +57,33 @@ function renderDots(){
   const wrap = $('#dots');
   wrap.innerHTML = '';
 
-  // Plant dots
-  for (const [nr, [px, py]] of Object.entries(POS.positions)){
+  // Plant dots — positions[nr] is a list of [x,y] (cluster of dots for one plant)
+  for (const [nr, coords] of Object.entries(POS.positions)){
     const n = parseInt(nr, 10);
     const plant = plantsByNr.get(n);
     if (!plant) continue;
-    const [xp, yp] = pdfToPct(px, py);
-    const el = document.createElement('button');
-    el.type = 'button';
-    el.className = 'dot';
-    el.dataset.nr = n;
-    el.dataset.slug = plant.slug;
-    el.dataset.group = plant.groupId;
-    el.style.left = xp + '%';
-    el.style.top = yp + '%';
-    el.setAttribute('aria-label', `${plant.name} (#${n})`);
-    el.addEventListener('mouseenter', () => onHover(n));
-    el.addEventListener('mouseleave', () => onUnhover(n));
-    el.addEventListener('focus', () => onHover(n));
-    el.addEventListener('blur', () => onUnhover(n));
-    el.addEventListener('click', (e) => { e.preventDefault(); onTap(n); });
-    wrap.appendChild(el);
-    dotEls.set(n, el);
+    const positions = Array.isArray(coords[0]) ? coords : [coords];  // back-compat
+    const elems = [];
+    for (const [px, py] of positions){
+      const [xp, yp] = pdfToPct(px, py);
+      const el = document.createElement('button');
+      el.type = 'button';
+      el.className = 'dot';
+      el.dataset.nr = n;
+      el.dataset.slug = plant.slug;
+      el.dataset.group = plant.groupId;
+      el.style.left = xp + '%';
+      el.style.top = yp + '%';
+      el.setAttribute('aria-label', `${plant.name} (#${n})`);
+      el.addEventListener('mouseenter', () => onHover(n));
+      el.addEventListener('mouseleave', () => onUnhover(n));
+      el.addEventListener('focus', () => onHover(n));
+      el.addEventListener('blur', () => onUnhover(n));
+      el.addEventListener('click', (e) => { e.preventDefault(); onTap(n); });
+      wrap.appendChild(el);
+      elems.push(el);
+    }
+    dotEls.set(n, elems);
   }
 
   // Tree dots
@@ -158,15 +163,21 @@ function onTreeTap(id){
   renderTreeInspector(id);
 }
 
+function setClasses(els, addClass){
+  for (const e of els){
+    e.classList.remove('is-active','is-related','is-dim');
+    if (addClass) e.classList.add(addClass);
+  }
+}
 function highlight(nr){
   const plant = plantsByNr.get(nr);
   if (!plant) return;
   const slug = plant.slug;
-  dotEls.forEach((el, n) => {
-    el.classList.remove('is-active','is-related','is-dim');
-    if (n === nr) el.classList.add('is-active');
-    else if (plantsByNr.get(n).slug === slug) el.classList.add('is-related');
-    else el.classList.add('is-dim');
+  dotEls.forEach((els, n) => {
+    let cls = 'is-dim';
+    if (n === nr) cls = 'is-active';
+    else if (plantsByNr.get(n).slug === slug) cls = 'is-related';
+    setClasses(els, cls);
   });
   treeEls.forEach(t => {
     t.el.classList.remove('is-active','is-related','is-dim');
@@ -181,13 +192,10 @@ function highlightTree(id){
     else if (other.slug === t.slug) other.el.classList.add('is-related');
     else other.el.classList.add('is-dim');
   });
-  dotEls.forEach(el => {
-    el.classList.remove('is-active','is-related');
-    el.classList.add('is-dim');
-  });
+  dotEls.forEach(els => setClasses(els, 'is-dim'));
 }
 function clearHighlight(){
-  dotEls.forEach(el => el.classList.remove('is-active','is-related','is-dim'));
+  dotEls.forEach(els => setClasses(els, null));
   treeEls.forEach(t => t.el.classList.remove('is-active','is-related','is-dim'));
 }
 
@@ -271,10 +279,10 @@ function bindFilters(){
     const g = a.dataset.group;
     if (!g){
       document.body.classList.remove('filter-active');
-      dotEls.forEach(el => el.classList.remove('in-filter'));
+      dotEls.forEach(els => els.forEach(e => e.classList.remove('in-filter')));
     } else {
       document.body.classList.add('filter-active');
-      dotEls.forEach(el => el.classList.toggle('in-filter', el.dataset.group === g));
+      dotEls.forEach(els => els.forEach(e => e.classList.toggle('in-filter', e.dataset.group === g)));
       treeEls.forEach(t => t.el.classList.toggle('in-filter', false));
     }
   }));

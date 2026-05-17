@@ -276,9 +276,9 @@
     "similar": false
   },
   "tree-quercus-ilex": {
-    "source_url": "https://en.wikipedia.org/wiki/Quercus_ilex",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Quercus_ilex_JPG1.jpg",
-    "query": "Quercus ilex",
-    "similar": false
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pleached_Lime_Avenue_at_Arley_Hall_-_geograph.org.uk_-_4505238.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Pleached_Lime_Avenue_at_Arley_Hall_-_geograph.org.uk_-_4505238.jpg",
+    "query": "Pleached lime (representative leivorm/espalier shape)",
+    "similar": true
   }
 }
